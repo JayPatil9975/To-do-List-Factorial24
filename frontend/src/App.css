@@ -1,0 +1,207 @@
+/* Background for the main app */
+.app-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at 60% 40%, #b2fefa 0%, #0ed2f7 100%),
+              linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main card styling */
+.todo-glass-card {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 340px;
+  max-width: 500px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+/* Header */
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.todo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Logout button */
+.logout-btn {
+  background: linear-gradient(90deg, #f5576c 0%, #f093fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(245,87,108,0.12);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Add task form */
+.add-task-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.add-task-input {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  background: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  color: #222;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.add-task-btn {
+  background: linear-gradient(90deg, #0ed2f7 0%, #b2fefa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(14,210,247,0.12);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.add-task-btn:hover {
+  background: linear-gradient(90deg, #0ed2f7 0%, #f093fb 100%);
+}
+
+/* Task list */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.6);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.todo-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: #0ed2f7;
+  margin-right: 1rem;
+}
+
+.todo-task-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.todo-task-text.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-edit-input {
+  flex: 1;
+  max-width: 220px;
+  margin-right: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.todo-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.todo-btn.edit {
+  background: #ffe082;
+  color: #222;
+}
+.todo-btn.edit:hover {
+  background: #ffd54f;
+}
+
+.todo-btn.save {
+  background: #81c784;
+  color: #fff;
+}
+.todo-btn.save:hover {
+  background: #388e3c;
+}
+
+.todo-btn.cancel {
+  background: #e0e0e0;
+  color: #222;
+}
+.todo-btn.cancel:hover {
+  background: #bdbdbd;
+}
+
+.todo-btn.delete {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+.todo-btn.delete:hover {
+  background: #ffcdd2;
+}
+
+/* Profile icon button */
+.profile-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.profile-icon-btn:hover {
+  background: #f0f0f0;
+  box-shadow: 0 4px 16px rgba(14,210,247,0.12);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .todo-glass-card {
+    min-width: 90vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .add-task-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
